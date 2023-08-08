@@ -118,7 +118,7 @@ printforcast([17, 21, 23]) */
 //add ... between elements and start an end of string 
 //log string to console 
 
-const data1 =  [17, 21, 23]; 
+/* const data1 =  [17, 21, 23]; 
 const data2 = [12, 5, -5, 0, 4]; 
 
 //if this code was jusg a fixed array with only 3 items 
@@ -139,4 +139,34 @@ const printForcast = (arr) => {
 
 }; 
 
-printForcast([17, 21, 23]);
+printForcast([17, 21, 23]); */ 
+
+
+/* ESERCIZIO 3
+ Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
+ Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
+*/ 
+
+//understanding 
+//a function that calculates the difference between a given number and a parameter 19 
+//this function will return the difference multiplied by 3 if the number given is equal to 19.. 
+
+//step by step 
+//create a function with one parameter that is equal to 19 ... done
+//calculate the difference of both and place the difference inside a variable 
+//creat an if condition that multiplies the variable by 3 if it is equals to 19 
+
+/* let num = 19;
+const crazyDiff = (randomParameter) => {
+
+  let differenceOfNums = Math.abs(num - randomParameter); 
+
+  if (differenceOfNums === 19) {
+     differenceOfNums = differenceOfNums * 3; 
+     //console.log(differenceOfNums);  
+  }
+  return differenceOfNums
+ 
+}
+
+console.log(crazyDiff(Math.floor(Math.random() * 20) + 1)); */
