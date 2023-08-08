@@ -25,7 +25,7 @@ const higherIndex = (index1, index2) => {
 //while loop is true,
 //crewMass divide the volume of crew members
 
-/* let crewMass = 50;
+let crewMass = 50;
 const massCalculator = (volume) => {
   while (crewMass) {
     if (volume <= crewMass) {
@@ -34,4 +34,109 @@ const massCalculator = (volume) => {
   }
   return crewMass / volume;
 };
-console.log(massCalculator(7)); */
+//console.log(massCalculator(7));
+
+/* let funds = 50; 
+
+while (funds > 1 && funds < 100) {
+    funds += 2; //2 steps forward 
+    funds -= 1;
+} */
+
+//let totalBet = rand(1, funds);
+//console.log(totalBet); 
+
+//writing a pseudo code 
+
+/* const returnValue = (value) {
+
+  if value type !== number && value type !== string && value type !== array 
+  return value; 
+
+  if value type === string 
+  reverse string 
+  
+  
+  if value number === string 
+  reverse number 
+
+  
+  if value type === array 
+  reverse array 
+
+  return reversed value;
+} */
+
+
+//challenge 
+
+//given an array of forcarsted maximum temps, the thermometer displays a string with these temps 
+//e.g [17, 21, 23] will print "...17c in 1days... 21c in 2 days... 23c in 3 days" 
+
+//create a function "printforcast" which takes in an array an logs a string like the above to the console
+
+// TEST DATA 1 ... [17, 21, 23] 
+//TEST DATA 2 ... [12, 5, -5, 0, 4]
+
+//THE PROBLEM
+//the thermometer will display a string with the elements of the array 
+//the elements will be printed as strings 
+
+
+//solution 
+//create a function 
+//create a for loop to loop through the array  
+//create a variable = 0 to compare if element is lower than 0
+//print each element using template literal into the string
+//omit elements that are below zero 
+
+
+//incorrect
+/* let degree = 0; 
+const printforcast = (temps) => {
+
+ 
+  for (let i = 0; i < temps.length; i++) {
+    if (temps[i] < 0) continue;
+    let result = temps[i];  
+    `...c in 1days... 21c in 2 days... 23c in 3 days`
+    if(result >= degree){
+
+    }
+    //console.log(result);
+  }
+} 
+
+printforcast([17, 21, 23]) */ 
+
+//correct method 
+
+//breaking up into sub-problems 
+//transform array into string 
+//transform element to string with degrees celsius 
+//string needs to contain day [index - 1] 
+//add ... between elements and start an end of string 
+//log string to console 
+
+const data1 =  [17, 21, 23]; 
+const data2 = [12, 5, -5, 0, 4]; 
+
+//if this code was jusg a fixed array with only 3 items 
+//one would have hard coded this using template literals 
+//added with the element index but that is not the case 
+ 
+const printForcast = (arr) => {
+  //create an empty string and in each iteration
+  //add the value to the string 
+  let str = "";  
+
+  for (let i = 0; i < arr.length; i++) {
+    str = str + `${arr[i]} degrees C in ${i + 1} days ...`;
+    //to get the day, u use the current index + 1 
+
+  }
+  console.log("..." + str);
+
+}; 
+
+printForcast([17, 21, 23]);
